@@ -1,0 +1,44 @@
+.main-nav__toggle {
+    display: block;
+    margin-top: 30px;
+    width: 22px;
+    height: 16px;
+    border: none;
+    background-color: inherit;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.main-nav__toggle span  {
+    display: block;
+    position: relative;
+    background-color: black;
+    width: 22px;
+    height: 2px;
+}
+
+.main-nav__toggle span::before {
+    position: absolute;
+    content: "";
+    top: 6px;
+    display: block;
+    background-color: black;
+    width: 22px;
+    height: 2px;
+}
+
+.main-nav__toggle span::after {
+    position: absolute;
+    content: "";
+    top: 12px;
+    display: block;
+    background-color: black;
+    width: 22px;
+    height: 2px;
+}
+
+.header__nav {
+    position: absolute;
+}

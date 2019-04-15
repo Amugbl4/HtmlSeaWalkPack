@@ -1,0 +1,33 @@
+@import "grid";
+@import "button";
+@import "form";
+@import "font-type";
+@import "header/index";
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.intro {
+    position: relative;
+
+    &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    }
+}
+
+
