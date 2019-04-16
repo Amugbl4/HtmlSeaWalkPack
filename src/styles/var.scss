@@ -55,10 +55,10 @@ $link-hover-decoration:     underline !default;
 // adapting to different screen sizes, for use in media queries.
 
 $grid-breakpoints: (
-        xs: 0,
-        sm: 768px,
-        md: 1024px,
-        lg: 1400px
+        mob: 0,
+        tab: 640px,
+        pc: 990px,
+        lg: 1440px
 ) !default;
 
 //@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");

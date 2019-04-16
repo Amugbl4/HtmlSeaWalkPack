@@ -6,38 +6,46 @@
     border: none;
     background-color: inherit;
 
+    span {
+        display: block;
+        position: relative;
+        background-color: black;
+        width: 22px;
+        height: 2px;
+
+        &::before {
+            position: absolute;
+            content: "";
+            top: 6px;
+            display: block;
+            background-color: black;
+            width: 22px;
+            height: 2px;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 12px;
+            display: block;
+            background-color: black;
+            width: 22px;
+            height: 2px;
+        }
+    }
+
     &:hover {
         cursor: pointer;
+
     }
 }
 
-.main-nav__toggle span  {
-    display: block;
-    position: relative;
-    background-color: black;
-    width: 22px;
-    height: 2px;
+@include mq-mob {
+    .nav-lists {
+        display: none;
+    }
 }
 
-.main-nav__toggle span::before {
-    position: absolute;
-    content: "";
-    top: 6px;
-    display: block;
-    background-color: black;
-    width: 22px;
-    height: 2px;
-}
-
-.main-nav__toggle span::after {
-    position: absolute;
-    content: "";
-    top: 12px;
-    display: block;
-    background-color: black;
-    width: 22px;
-    height: 2px;
-}
 
 .header__nav {
     position: absolute;
