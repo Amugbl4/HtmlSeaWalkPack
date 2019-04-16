@@ -1,0 +1,5 @@
+.container {
+    @include mq-mob {
+        padding: 0 15px;
+    }
+}

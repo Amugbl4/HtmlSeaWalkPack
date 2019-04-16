@@ -1,0 +1,57 @@
+.intro {
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    &__content {
+        @include mq-mob {
+            padding-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        @include mq-mob {
+            font-family: $ff-title;
+            font-size: 20px;
+            color: #0d3351;
+            margin: 0;
+            width: 200px;
+            text-align: center;
+        }
+    }
+
+    &__title--big {
+        @include mq-mob {
+            font-size: 50px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: -1.25px;
+            line-height: 0.96; 
+            width: 245px;
+            margin-top: 20px;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 20px;
+
+        & img {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    &__action-link {
+        @include mq-mob {
+            margin-top: 40px;
+        }
+    }
+}
