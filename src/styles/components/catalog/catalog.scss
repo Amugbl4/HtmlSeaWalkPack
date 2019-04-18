@@ -1,0 +1,37 @@
+.line-svg {
+    display: block;
+    height: 300px;
+    width: 65px;
+    margin-top: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='2.205cm' height='10.072cm'%3E%3Cpath fill-rule='evenodd' stroke='rgb(13, 51, 81)' stroke-width='3px' stroke-dasharray='12, 6' stroke-linecap='butt' stroke-linejoin='miter' fill='none' d='M43.692,2.191 C51.530,25.710 63.194,32.856 58.336,70.379 C50.685,107.532 16.394,116.472 5.907,157.303 C-3.734,209.662 40.871,205.775 38.328,268.687 C37.932,278.501 37.804,290.253 35.148,299.224 '/%3E%3C/svg%3E");
+}
+
+.catalog {
+    padding-bottom: 30px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-family: $ff-title;
+        font-size: 20px;
+        line-height: 48px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    &__filter {
+        margin-bottom: 30px;
+
+        & select {
+            border: none;
+            background-color: transparent;
+            font-family: $ff-base;
+            font-size: 14px;
+            letter-spacing: 0.7px;
+        }
+    }
+}
