@@ -1,53 +1,87 @@
-.main-nav__toggle {
-    display: block;
-    margin-top: 30px;
-    width: 22px;
-    height: 16px;
-    border: none;
-    background-color: inherit;
-    cursor: pointer;
-
-    span {
-        display: block;
-        position: relative;
-        background-color: black;
-        width: 22px;
-        height: 2px;
-
-        &::before {
-            position: absolute;
-            content: "";
-            top: 6px;
-            display: block;
-            background-color: black;
-            width: 22px;
-            height: 2px;
-        }
-
-        &::after {
-            position: absolute;
-            content: "";
-            top: 12px;
-            display: block;
-            background-color: black;
-            width: 22px;
-            height: 2px;
-        }
-    }
-
-    &:hover {
-        cursor: pointer;
-
-    }
-}
-
-@include mq-mob {
-    .nav-lists {
-        display: none;
-    }
-}
-
-
-.header__nav {
+.header {
+    min-height: 85px;
+    width: 100%;
     position: absolute;
+
+    &__user-nav {
+        display: none;
+        @include mq-from-tab {
+            display: flex;
+        }
+    }
+
+    &__nav {
+        z-index: 10;
+
+        &-toggle {
+            position: relative;
+            display: block;
+            margin: 0;
+            padding: 0;
+            margin-top: 30px;
+            border: none;
+            background-color: inherit;
+            width: 22px;
+            height: 16px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -5px;
+                right: -5px;
+                bottom: -10px;
+                z-index: 2;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+
+
+            & span {
+                display: block;
+                position: relative;
+                background-color: black;
+                width: 22px;
+                height: 2px;
+
+                &::before {
+                    position: absolute;
+                    content: "";
+                    top: 6px;
+                    display: block;
+                    background-color: black;
+                    width: 22px;
+                    height: 2px;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    top: 12px;
+                    display: block;
+                    background-color: black;
+                    width: 22px;
+                    height: 2px;
+                }
+
+            }
+
+        }
+
+        &-lists {
+            display: none;
+
+            &--open {
+                display: block;
+                position: absolute;
+                top: 85px;
+                z-index: 10;
+                left: 0;
+                width: 100%;
+                background-color: #0d3351;
+            }
+        }
+    }
 }

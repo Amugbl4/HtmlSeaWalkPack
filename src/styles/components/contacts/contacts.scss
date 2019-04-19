@@ -1,0 +1,18 @@
+.contacts {
+    text-align: left;
+    font-family: $ff-base;
+    color: #0d3351;
+
+    &__tel {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+        color: #0d3351;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        font-size: 10px;
+    }
+}

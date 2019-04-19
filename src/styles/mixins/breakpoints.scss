@@ -31,7 +31,7 @@
 }
 
 @mixin mq-mob {
-  @media (max-width: 639px) {
+  @media (max-width: 767px) {
     @content;
   }
 
@@ -39,35 +39,36 @@
 
 // from tab
 @mixin mq-from-tab {
-  @media (min-width: 640px) {
+  @media (min-width: 768px) {
     @content;
   }
 }
 
 // tab only
 @mixin mq-tab {
-  @media (min-width: 640px) and (max-width: 989px) {
-    @content
+  @media (min-width: 768px) and (max-width: 1023px) {
+    @content;
   }
 }
 
 // from pc
 @mixin mq-from-pc {
-  @media (min-width: 990px) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
     @content;
   }
 }
 
+
 // under pc
 @mixin mq-under-pc {
-  @media (max-width: 989px) {
+  @media (max-width: 1023px) {
     @content;
   }
 }
 
 // pc only
 @mixin mq-pc {
-  @media (min-width: 990px) and (max-width: 1439px) {
+  @media (min-width: 1200px) and (max-width: 1919px) {
     @content;
   }
 }

@@ -1,5 +1,13 @@
 .container {
-    @include mq-mob {
-        padding: 0 15px;
+    padding: 0 15px;
+
+    @include mq-tab {
+        margin: 0 auto;
+        max-width: 1000px; 
+    }
+
+    @include mq-pc {
+        margin: 0 auto;
+        max-width: 1200px;
     }
 }

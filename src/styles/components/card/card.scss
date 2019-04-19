@@ -2,6 +2,32 @@
     position: relative;
     margin-bottom: 20px;
 
+    @include mq-tab {
+        width: 50%;
+        padding: 0 5px;
+        flex: 0 1 50%;
+    }
+
+    @include mq-from-pc {
+        width: 50%;
+        padding: 0 5px;
+        flex: 0 1 50%;
+    }
+
+    &__list {
+        @include mq-tab {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -5px;
+        }
+
+        @include mq-from-pc {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -5px;
+        }
+    }
+
     &__img {
         position: relative;
         height: 0;
@@ -119,5 +145,5 @@
         text-decoration: line-through;
         white-space: nowrap;
     }
-    
+
 }
