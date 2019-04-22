@@ -9,12 +9,40 @@
 
         @include mq-tab {
             flex-direction: row;
+            justify-content: space-between;
+        }
+
+        @include mq-lg {
+            flex-direction: row;
         }
     }
 
     &__nav {
-        @include mq-mob {
-            display: none;
+        display: none;
+
+        @include mq-tab {
+            display: block;
+        }
+
+
+        @include mq-lg {
+            display: block;
+            margin-right: 150px;
+        }
+    }
+
+    .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        &__item a {
+            display: inline-block;
+            font-family: $ff-base;
+            font-size: 14px;
+            color: #0d3351;
+            text-decoration: none;
+            margin-bottom: 10px;
         }
     }
 
@@ -72,6 +100,12 @@
         }
     }
 
+    &__info {
+        @include mq-lg {
+            margin-left: auto;
+        }
+    }
+
     &__copyright {
         font-family: $ff-base;
         font-size: 14px;
@@ -81,8 +115,13 @@
     &__contacts {
         margin-bottom: 10px;
 
+
         & .contacts {
             text-align: center;
+
+            @include mq-tab {
+                text-align: left;
+            }
         }
     }
 }

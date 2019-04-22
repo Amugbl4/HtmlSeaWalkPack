@@ -21,6 +21,14 @@
         line-height: 48px;
         letter-spacing: 1px;
         text-align: center;
+
+        @include mq-tab {
+            font-size: 26px;
+        }
+
+        @include mq-lg {
+            font-size: 36px;
+        }
     }
 
     &__filter {

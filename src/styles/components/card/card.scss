@@ -8,30 +8,48 @@
         flex: 0 1 50%;
     }
 
-    @include mq-from-pc {
-        width: 50%;
-        padding: 0 5px;
-        flex: 0 1 50%;
+    &--big {
+        @include mq-lg  {
+            grid-column: 1/2;
+            grid-row: 1/3;
+        }
     }
 
     &__list {
+        
         @include mq-tab {
             display: flex;
             flex-wrap: wrap;
             margin: 0 -5px;
         }
-
-        @include mq-from-pc {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 -5px;
+        
+        @include mq-lg {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 300px 300px 400px;
+            grid-column-gap: 30px;
+            grid-row-gap: 20px; 
+            margin-bottom: 20px;
         }
     }
 
     &__img {
         position: relative;
         height: 0;
-        padding-top: 79.3%;
+        padding-top: 79.53%;
+
+        &--one-third {
+            @include mq-lg {
+                padding-top: 20.36%;
+            }
+        }
+
+        &--one-half {
+            @include mq-lg {
+                padding-top: 38.73%;
+            }
+        }
 
         & img {
             position: absolute;

@@ -10,6 +10,8 @@ require('./utils/index');
 
 //----------------------------------------------
 
+require('./components/header')
+
 $(document).ready(function () {
 	$('.js-example-basic-single').select2();
 });

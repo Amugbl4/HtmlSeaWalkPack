@@ -3,11 +3,11 @@
 
     @include mq-tab {
         margin: 0 auto;
-        max-width: 1000px; 
+        max-width: 720px; 
     }
 
-    @include mq-pc {
+    @include mq-lg {
         margin: 0 auto;
-        max-width: 1200px;
+        max-width: 1140px;
     }
 }

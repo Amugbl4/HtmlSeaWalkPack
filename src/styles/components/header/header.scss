@@ -2,11 +2,22 @@
     min-height: 85px;
     width: 100%;
     position: absolute;
+    z-index: 100;
 
     &__user-nav {
         display: none;
-        @include mq-from-tab {
+
+        @include mq-lg {
             display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+    &__main-nav {
+        display: none;
+
+        body.menu-opened & {
+            display: block;
         }
     }
 
@@ -15,7 +26,7 @@
 
         &-toggle {
             position: relative;
-            display: block;
+            display: inline-block;
             margin: 0;
             padding: 0;
             margin-top: 30px;
@@ -42,6 +53,7 @@
             & span {
                 display: block;
                 position: relative;
+                margin-top: 50%;
                 background-color: black;
                 width: 22px;
                 height: 2px;
@@ -49,7 +61,7 @@
                 &::before {
                     position: absolute;
                     content: "";
-                    top: 6px;
+                    top: -7px;
                     display: block;
                     background-color: black;
                     width: 22px;
@@ -59,29 +71,85 @@
                 &::after {
                     position: absolute;
                     content: "";
-                    top: 12px;
+                    top: 7px;
                     display: block;
                     background-color: black;
                     width: 22px;
                     height: 2px;
                 }
 
+                body.menu-opened & {
+                    background-color: transparent;
+                    transition: 0.2s ease;
+
+                    &::before {
+                        transform: rotate(45deg);
+                        top: 0;
+                        transition: 0.5s ease;
+                    }
+
+                    &::after {
+                        transform: rotate(-45deg);
+                        top: 0;
+                        transition: 0.5s ease;
+                    }
+                }
             }
 
         }
+    }
+}
 
-        &-lists {
-            display: none;
+.main-nav {
 
-            &--open {
-                display: block;
-                position: absolute;
-                top: 85px;
-                z-index: 10;
-                left: 0;
-                width: 100%;
-                background-color: #0d3351;
-            }
+    &__list {
+        position: absolute;
+        top: 85px;
+        z-index: 10;
+        left: 0;
+        margin: 0;
+        padding: 70px 40px;
+        list-style: none;
+        width: 100%;
+        background-color: #0d3351;
+
+        @include mq-lg {
+            width: 420px;
+        }
+    }
+
+    &__item a {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        margin-bottom: 30px;
+    }
+}
+
+.user-nav {
+    &__list{
+        display: flex;
+        list-style: none;
+    }
+
+    &__item {
+        padding-left: 20px;
+        margin-right: 30px;
+        
+        & a {
+            text-decoration: none;
+            font-family: $ff-base;
+            font-size: 14px;
+            color: #0d3351;
+        }
+
+        & select {
+            border: none;
+            padding: 0;
+            background-color: transparent;
+            font-family: $ff-base;
+            font-size: 14px;
+            letter-spacing: 0.7px;
         }
     }
 }

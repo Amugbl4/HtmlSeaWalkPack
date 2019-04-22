@@ -31,7 +31,7 @@
 }
 
 @mixin mq-mob {
-  @media (max-width: 767px) {
+  @media (max-width: 1023px) {
     @content;
   }
 
@@ -39,21 +39,21 @@
 
 // from tab
 @mixin mq-from-tab {
-  @media (min-width: 768px) {
+  @media (min-width: 1023px) {
     @content;
   }
 }
 
 // tab only
 @mixin mq-tab {
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 1024px) and (max-width: 1439px) {
     @content;
   }
 }
 
 // from pc
-@mixin mq-from-pc {
-  @media (min-width: 1024px) and (max-width: 1199px) {
+@mixin mq-pc {
+  @media (min-width: 1199px) and (max-width: 1439px) {
     @content;
   }
 }
@@ -61,24 +61,24 @@
 
 // under pc
 @mixin mq-under-pc {
-  @media (max-width: 1023px) {
+  @media (max-width: 1199px) {
     @content;
   }
 }
 
-// pc only
-@mixin mq-pc {
-  @media (min-width: 1200px) and (max-width: 1919px) {
-    @content;
-  }
-}
+// // pc only
+// @mixin mq-pc {
+//   @media (min-width: 1440px) and (max-width: 1919px) {
+//     @content;
+//   }
+// }
 
-// under lg
-@mixin mq-under-lg {
-  @media (max-width: 1439px) {
-    @content;
-  }
-}
+// // under lg
+// @mixin mq-under-lg {
+//   @media (max-width: 1439px) {
+//     @content;
+//   }
+// }
 
 // from large
 @mixin mq-from-lg {
