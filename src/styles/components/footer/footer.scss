@@ -122,6 +122,10 @@
             @include mq-tab {
                 text-align: left;
             }
+
+            @include mq-lg {
+                text-align: left;
+            }
         }
     }
 }
