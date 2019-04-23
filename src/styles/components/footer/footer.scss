@@ -50,6 +50,14 @@
         text-align: center;
         margin-bottom: 20px;
 
+        @include mq-tab {
+            text-align: left;
+        }
+
+        @include mq-lg {
+            text-align: left;
+        }
+
         &-text {
             font-family: $ff-base;
             font-size: 14px;
